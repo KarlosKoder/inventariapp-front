@@ -4,6 +4,9 @@ import AboutSComponent from "../components/AboutSComponent"
 import FooterComponent from "../components/FooterComponent";
 import ServiciosComponent from "../components/ServiciosComponent";
 import HeaderContainer from "../components/HeaderContainer";
+import { Container } from "react-bootstrap";
+import NavComponent from "../components/NavComponent";
+
 
 export default function Home() {
   return (
@@ -24,7 +27,8 @@ export default function Home() {
           crossorigin="anonymous"
         ></link>
       </Head>
-
+      <NavComponent/>
+     
       <HeaderContainer />
       <AboutComponent />
       <ServiciosComponent />
@@ -32,6 +36,9 @@ export default function Home() {
   
       <FooterComponent />
 
+      
+
+      
       <footer className="footer">
         <script
           src="https://unpkg.com/react/umd/react.production.min.js"
