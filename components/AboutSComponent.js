@@ -7,7 +7,7 @@ function AboutSComponent() {
       <Container>
         <Row>
           <Col xs={12} md={6}>
-            <img src="assets/" className="img-fluid" />
+            <img src="assets/landing-page2.svg" className="img-fluid" />
           </Col>
           <Col xs={12} md={6} className="about-details">
             <div>
