@@ -1,10 +1,11 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import styles from "../styles/footer.module.scss"
 
 function ContactComponent() {
   return (
-    <div className="contact-container-bg">
-      <Container className="contact-component">
+    <div className={styles.contactContainerBg}>
+      <Container className={styles.contactComponent}>
         <Row>
           <Col xs={12} md={6}>
             <h1>InventariApp</h1>

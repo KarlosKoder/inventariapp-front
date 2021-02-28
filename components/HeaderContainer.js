@@ -1,24 +1,25 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import styles from "../styles/header.module.scss"
 
 function HeaderContainer() {
   return (
     <>
-      <div className="background"></div>
-      <div className="texture">
-        <Container className="container-top">
-        <Row className="section-header">
-            <Col xs={12} md={6} className="section-title">
+      <div className={styles.background}></div>
+      <div className={styles.texture}>
+        <Container className={styles.containerTop}>
+        <Row className={styles.sectionHeader}>
+            <Col xs={12} md={6} className={styles.sectionTitle}>
             
-              <h2>La forma más <span className="span-header">fácil</span><br></br>
+              <h2>La forma más <span className={styles.spanHeader}>fácil</span><br></br>
               de empezar tu<br></br> tienda online <br></br>
-              desde tu <span className="span-header">móvil</span></h2>
+              desde tu <span className={styles.spanHeader}>móvil</span></h2>
               
               
-              <button className="btn btn-custom">¡Comienza ya!</button>
+              <button className="">¡Comienza ya!</button>
              
             </Col>
-            <Col xs={12} md={6} className="section-img">
+            <Col xs={12} md={6} className="">
             <img className="img-fluid" src="/principal.svg" />
             
               
