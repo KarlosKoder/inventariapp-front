@@ -1,6 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import NavComponent from "../Components/NavComponent/NavComponent";
 import { Form, Button } from "react-bootstrap"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
@@ -10,9 +11,9 @@ export const Inicia = () => {
 
         <div>
             <NavComponent />
-            <Container>
+            <Container >
                 <Row>
-                    <Col xs={12} md={6} >
+                    <Col xs={12} md={3} >
 
                         <form style={{ width: "100%", marginLeft: "10%", marginTop: "10%" }}>
                             <Form.Group>
@@ -43,14 +44,21 @@ export const Inicia = () => {
                                     <Form.Label> Precio </Form.Label>
                                     <Form.Control type="" placeholder="9.99" />
                                 </Form.Group>
-                                <Form.Group>
-                                    <Form.Label>  </Form.Label>
-                                    <Form.Control type="" placeholder="MXN" />
+
+                                <Form.Group controlId="exampleForm.ControlSelect1">
+
+                                    <Form.Control as="select">
+                                        <option>MXN</option>
+                                        <option>USD</option>
+                                        <option>EUR</option>
+                                    </Form.Control>
                                 </Form.Group>
+
                             </div>
-                            <Form.Group>
-                                <Form.Label> Titulo del producto </Form.Label>
-                                <Form.Control type="" placeholder="Camiseta de algodón" />
+                        
+                            <Form.Group controlId="exampleForm.ControlTextarea1">
+                                <Form.Label>Descripción del producto</Form.Label>
+                                <Form.Control placeholder="Características del producto" as="textarea" rows={6} />
                             </Form.Group>
 
 
@@ -60,25 +68,30 @@ export const Inicia = () => {
 
                     </Col>
 
-                    <Col xs={12} md={6} >
+                    <Col xs={12} md={3} >
                         <form style={{ width: "100%", marginLeft: "10%", marginTop: "10%" }}>
                             <div>
-                            <Form.Group>
-                            <Form.Label> Titulo del producto </Form.Label>
-                            <Form.Control type="" placeholder="Camiseta de algodón" />
-                        </Form.Group>
-                        <Form.Group>
-                            <Form.Label> Sube tu imagen </Form.Label>
-                            <Form.Control type="" placeholder="" />
-                        </Form.Group>
-                        <Form.Group>
-                            <Form.Label> ¿Cuantos productos tienes? </Form.Label>
-                            <Form.Control type="" placeholder="Productos en stock" />
-                        </Form.Group>
-                        <Form.Group>
-                            <Form.Label> Condición </Form.Label>
-                            <Form.Control type="" placeholder="New" />
-                        </Form.Group>
+                                <Form.Group>
+                                    <Form.Label> Titulo del producto </Form.Label>
+                                    <Form.Control type="" placeholder="Camiseta de algodón" />
+                                </Form.Group>
+                                <Form.Group>
+
+                                    <Form.File id="exampleFormControlFile1" label="Example file input" />
+
+                                </Form.Group>
+                                <Form.Group>
+                                    <Form.Label> ¿Cuantos productos tienes? </Form.Label>
+                                    <Form.Control type="" placeholder="3" />
+                                </Form.Group>
+                                <Form.Group>
+                                    <Form.Label>Example select</Form.Label>
+                                    <Form.Control as="select">
+                                        <option>New</option>
+                                        <option>Refurbished</option>
+                                        <option>Used</option>
+                                    </Form.Control>
+                                </Form.Group>
 
 
 
@@ -86,10 +99,10 @@ export const Inicia = () => {
 
                             </div>
                         </form>
-                        
+
                     </Col>
 
-                    <Button type="submit"> ¡Registrate!</Button>
+                    
                 </Row>
 
             </Container>
