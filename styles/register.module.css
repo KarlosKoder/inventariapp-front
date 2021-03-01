@@ -31,18 +31,20 @@
           align-items: center;
   -webkit-backdrop-filter: blur(40px);
           backdrop-filter: blur(40px);
-  border: 1px solid white;
+  border: 1px solid #b9dbf665;
+  -webkit-box-shadow: 0px 1px 55px -12px rgba(3, 12, 26, 0.39);
+  box-shadow: 0px 1px 55px -12px rgba(3, 12, 26, 0.39);
 }
 
 /* texto */
 .sectionTitle > h2 {
   min-width: 20%;
   font-weight: 300;
-  color: #E88F14;
+  color: #e88f14;
 }
 
 .spanHeader {
   font-weight: 700;
-  color: #E88F14;
+  color: #e88f14;
 }
 /*# sourceMappingURL=register.module.css.map */
