@@ -2,6 +2,8 @@ import React from 'react'
 import { Col, Container, Row } from "react-bootstrap";
 import styles from "../../styles/register.module.scss"
 
+import ResgisterFormComponent from "../RegisterFormComponent/ResgisterFormComponent"
+
 function RegisterComponent() {
     return (
         <> 
@@ -11,14 +13,15 @@ function RegisterComponent() {
         <Row className={styles.sectionHeader}>
             <Col xs={12} md={6} className={styles.sectionTitle}>
             
-              <h2>¿Cómo <span className={styles.spanHeader}>empezamos</span>?</h2>
-              <h5>Crea tu tienda en pocos minutos</h5>
+              
+
+              <ResgisterFormComponent/>
               
         
              
             </Col>
             <Col xs={12} md={6} className={styles.sectionImg}>
-            <img className={styles.imgFluid} src="/principal.svg" />
+            <img className={styles.imgFluid} src="/backregister.svg" />
             
               
               
