@@ -1,16 +1,15 @@
 import { Container, Row, Col } from "react-bootstrap";
-import NavComponent from "../Components/NavComponent/NavComponent";
 import { Form, Button } from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
-export const Inicia = () => {
+export const NewProductComponent= () => {
     return (
 
 
         <div>
-            <NavComponent />
+           
             <Container >
                 <Row>
                     <Col xs={12} md={3} >
@@ -110,4 +109,4 @@ export const Inicia = () => {
     )
 }
 
-export default Inicia;
+export default NewProductComponent;

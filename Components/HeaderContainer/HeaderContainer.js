@@ -1,8 +1,10 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import styles from "../../styles/header.module.scss"
+import { useRouter } from 'next/router';
 
 function HeaderContainer() {
+  const router = useRouter();
   return (
     <>
       <div className={styles.background}></div>
@@ -16,7 +18,7 @@ function HeaderContainer() {
               desde tu <span className={styles.spanHeader}>móvil</span></h2>
               
               
-              <button className="">¡Comienza ya!</button>
+              <button onClick={() => router.push('/register')} className="">¡Comienza ya!</button>
              
             </Col>
             <Col xs={12} md={6} className="">

@@ -1,16 +1,12 @@
+import React from 'react'
 import Head from "next/head";
-import AboutComponent from "../Components/AboutComponent/AboutComponent";
-import AboutSComponent from "../Components/AboutScomponent/AboutSComponent"
-import FooterComponent from "../Components/FooterComponent/FooterComponent";
-import ServiciosComponent from "../Components/ServiciosComponent/ServiciosComponent";
-import HeaderContainer from "../Components/HeaderContainer/HeaderContainer";
-import NavComponent from "../Components/NavComponent/NavComponent";
+import NewProductComponent from "../Components/NewProductComponent/NewProductComponent";
+import NavComponent from "../Components/NavComponent/NavComponent"
 
-
-export default function Home() {
-  return (
-    <div>
-      <Head>
+function newproduct() {
+    return (
+        <div>
+            <Head>
         <title>InventariApp</title>
         <link rel="icon" href="/favicon.ico" />
         <link
@@ -27,13 +23,9 @@ export default function Home() {
         ></link>
       </Head>
       <NavComponent/>
+      <NewProductComponent />
      
-      <HeaderContainer />
-      <AboutComponent />
-      <ServiciosComponent />
-      <AboutSComponent />
-      <FooterComponent />
-
+     
       
 
       
@@ -54,5 +46,9 @@ export default function Home() {
         ></script>
       </footer>
     </div>
-  );
+            
+       
+    )
 }
+
+export default newproduct
