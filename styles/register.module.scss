@@ -7,12 +7,13 @@
     position: fixed;
     z-index: -1;
     top: 0px;
+    background-repeat:no-repeat;
   }
   .texture {
-    background-image: url("../public/assets/texture.png");
+    background-image: url("../public/assets/texture-r.svg");
     background-attachment: fixed;
     height: 100vh;
-    background-repeat:repeat;
+    background-repeat:no-repeat;
   }
   .sectionHeader {
     min-width: 80vw;
