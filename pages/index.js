@@ -1,11 +1,10 @@
 import Head from "next/head";
-import AboutComponent from "../components/AboutComponent";
-import AboutSComponent from "../components/AboutSComponent"
-import FooterComponent from "../components/FooterComponent";
-import ServiciosComponent from "../components/ServiciosComponent";
-import HeaderContainer from "../components/HeaderContainer";
-import { Container } from "react-bootstrap";
-import NavComponent from "../components/NavComponent";
+import AboutComponent from "../Components/AboutComponent/AboutComponent";
+import AboutSComponent from "../Components/AboutScomponent/AboutSComponent"
+import FooterComponent from "../Components/FooterComponent/FooterComponent";
+import ServiciosComponent from "../Components/ServiciosComponent/ServiciosComponent";
+import HeaderContainer from "../Components/HeaderContainer/HeaderContainer";
+import NavComponent from "../Components/NavComponent/NavComponent";
 
 
 export default function Home() {

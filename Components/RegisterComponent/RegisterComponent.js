@@ -1,6 +1,6 @@
 import React from 'react'
 import { Col, Container, Row } from "react-bootstrap";
-import styles from "../styles/register.module.scss"
+import styles from "../../styles/register.module.scss"
 
 function RegisterComponent() {
     return (
@@ -8,7 +8,7 @@ function RegisterComponent() {
         <div className={styles.background}></div>
       <div className={styles.texture}>
         <Container className={styles.containerTop}>
-        <Row className="sectionheader">
+        <Row className={styles.sectionHeader}>
             <Col xs={12} md={6} className={styles.sectionTitle}>
             
               <h2>¿Cómo <span className={styles.spanHeader}>empezamos</span>?</h2>

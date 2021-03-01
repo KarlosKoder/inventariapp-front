@@ -1,4 +1,4 @@
-import NavComponent from "../components/NavComponent";
+import NavComponent from "../Components/NavComponent/NavComponent";
 
 export const INICIA = () => {
     return (

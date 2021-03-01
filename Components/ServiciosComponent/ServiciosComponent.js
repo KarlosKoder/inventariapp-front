@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import styles from "../styles/Servicios.module.css"
+import styles from "../../styles/servicios.module.scss"
 
 function ServiceComponent() {
   return (
