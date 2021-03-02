@@ -4,8 +4,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
+
 export const NewProductComponent= () => {
     return (
+        <> 
+
+
+        <div className={styles.background}></div>
 
 
         <div>
@@ -106,6 +111,7 @@ export const NewProductComponent= () => {
 
             </Container>
         </div>
+        </>
     )
 }
 
