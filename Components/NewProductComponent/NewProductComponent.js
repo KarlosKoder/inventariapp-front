@@ -22,7 +22,7 @@ export const NewProductComponent= () => {
                         <form style={{ width: "100%", marginLeft: "10%", marginTop: "10%" }}>
                             <Form.Group>
                                 <Form.Label> Identificador SKU</Form.Label>
-                                <Form.Control type="" placeholder="12234" />
+                                <Form.Control type="" placeholder="1223456" />
                             </Form.Group>
                             <Form.Group>
                                 <Form.Label> Titulo del producto </Form.Label>
