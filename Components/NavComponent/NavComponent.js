@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router';
 import { Col, Container, Row, Navbar, Nav, Form } from "react-bootstrap";
-import styles from "../../styles/nav.module.scss"
+
 
 function NavComponent() {
     const router = useRouter();
@@ -16,9 +16,9 @@ function NavComponent() {
                                 width="100"
                                 height="100"
                                 className="d-inline-block align-top"
-                                alt="React Bootstrap logo"
+                                alt="Inventariapp logo"
                             />
-                        </Navbar.Brand>
+             gits           </Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="mr-auto">
