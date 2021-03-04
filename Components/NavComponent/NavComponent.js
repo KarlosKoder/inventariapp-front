@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router';
 import { Col, Container, Row, Navbar, Nav, Form } from "react-bootstrap";
-
+import styles from "../../styles/nav.module.scss"
 
 function NavComponent() {
     const router = useRouter();
