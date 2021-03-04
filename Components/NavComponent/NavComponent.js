@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRouter } from 'next/router';
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row, Navbar, Nav, Form } from "react-bootstrap";
 import styles from "../../styles/nav.module.scss"
 
 function NavComponent() {
@@ -8,22 +8,32 @@ function NavComponent() {
 
     return (
         <>
-            <Container>
-                <Row>
-                    <Col>
-                        <img className="img-fluid" src="logo.png" />
-                    </Col>
-                    <Col>
-                        <div className={styles.main}>
-                            <div onClick={() => router.push('/')}>Inicio</div>
-                            <div onClick={() => router.push('/register')}>Registrate</div>
-                            <div onClick={() => router.push('/signup')}>Inicia sesión</div>
-                            <div onClick={() => router.push('/products')}>productos</div>
-                            
+           <Container className="p-0">
+             <Navbar className="p-0" expand="lg">
+                        <Navbar.Brand href="#home">
+                            <img onClick={() => router.push('/')} className={styles.imgFluid} 
+                                src="/logo.svg"
+                                width="100"
+                                height="100"
+                                className="d-inline-block align-top"
+                                alt="Inventariapp logo"
+                            />
+             gits           </Navbar.Brand>
+                        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                        <Navbar.Collapse id="basic-navbar-nav">
+                            <Nav className="mr-auto">
+                                
+                                
 
-                        </div>
-                    </Col>
-                </Row>
+                            </Nav>
+                            <Form  inline className={styles.main}>
+                            <Nav.Link className={styles.mainText} onClick={() => router.push('/')}>Inicio</Nav.Link>
+                                <Nav.Link className={styles.mainText}  onClick={() => router.push('/register')}>Registrate</Nav.Link>
+                                <Nav.Link className={styles.mainText}  onClick={() => router.push('/register')}>¡Comienza ya!</Nav.Link> 
+                                
+                            </Form>
+                        </Navbar.Collapse>
+                    </Navbar>
             </Container>
         </>
 

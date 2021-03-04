@@ -24,6 +24,24 @@ export default function CardComponent({props}) {
         link:"http://www.tutienda.com",
         description:"Hermosa chamarra de mezclilla con la aplicación de encaje"
         },
+        { image_link: "/backregister.svg", 
+        title:"Chamarra de mezclilla", 
+        price:"100 MXN",
+        inventory:"60 piezas", 
+        condition:"New",
+        brand:"Meeko",
+        link:"http://www.tutienda.com",
+        description:"Hermosa chamarra de mezclilla con la aplicación de encaje"
+        },
+        { image_link: "/backregister.svg", 
+        title:"Chamarra de mezclilla", 
+        price:"100 MXN",
+        inventory:"60 piezas", 
+        condition:"New",
+        brand:"Meeko",
+        link:"http://www.tutienda.com",
+        description:"Hermosa chamarra de mezclilla con la aplicación de encaje"
+        },
 
 
 
@@ -31,9 +49,7 @@ export default function CardComponent({props}) {
 
     const renderCard = (card, index) => {
         return (
-            <div className={`p-1 ${styles.card}`}>
-
-                
+            <div className={`p-1 ${styles.card} d-flex`}>   
             <Card>
                 <Card.Img variant="top" src={`${card.image_link}`}/>
                 <Card.Body className={`p-2 ${styles.bodyCard}`}>

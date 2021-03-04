@@ -4,7 +4,7 @@ import styles from "../../styles/servicios.module.scss"
 
 function ServiceComponent() {
   return (
-    <div className={styles.serviceContainerBg}>
+    <div className={`p-0 ${styles.serviceContainerBg}`}>
       <Container className={styles.serviceContainer}>
         <Row>
           <Col xs={12} md={4}>
@@ -35,7 +35,7 @@ function ServiceComponent() {
             </p>
           </Col>
         </Row>
-        <hr />
+      
       </Container>
     </div>
   );
