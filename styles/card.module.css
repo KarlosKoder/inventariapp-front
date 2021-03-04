@@ -1,5 +1,28 @@
+.image_link {
+  height: 30%;
+  width: 30%;
+}
+
+.bodyCard {
+  font-size: 15px;
+}
+
+.bodysubtitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .title {
-  color: orange !important;
-  font-size: smaller;
+  color: orange;
+  font-size: 15px;
+}
+
+.subtitle {
+  font-size: 10px;
+}
+
+.dtitle {
+  font-size: 10px;
 }
 /*# sourceMappingURL=card.module.css.map */

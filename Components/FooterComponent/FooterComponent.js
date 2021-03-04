@@ -13,9 +13,9 @@ function ContactComponent() {
               Buscanos en nuestras redes
             </p>
             <div>
-              <span className="fa fa-facebook-square"></span>
-              <span className="fa fa-instagram"></span>
-              <span className="fa fa-linkedin-square"></span>
+            <span className={`fa fa-facebook-square  ${styles.fa}`}></span>
+              <span className={`fa fa-instagram  ${styles.fa}`}></span>
+              <span className={`fa fa-linkedin-square  ${styles.fa}`}></span>
             </div>
           </Col>
           <Col xs={12} md={3}>
