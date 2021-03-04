@@ -1,5 +1,10 @@
 @charset "UTF-8";
 /* Background  */
+.imgFluid {
+  max-width: 75%;
+  max-height: 75%;
+}
+
 .background {
   background-image: url("../public/assets/bg.png");
   height: 100vh;
@@ -39,7 +44,12 @@
 }
 
 /* texto */
-.sectionTitle > h2 {
+.sectionT {
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.sectionT > h2 {
   min-width: 20%;
   font-weight: 300;
   color: #E88F14;
@@ -53,6 +63,8 @@
 .btnCustom {
   background-color: #E88F14;
   color: white;
+  border: #E88F14;
+  border-radius: 3px;
 }
 
 .btnCustom:hover {

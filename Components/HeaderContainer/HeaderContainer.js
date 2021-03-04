@@ -12,17 +12,25 @@ function HeaderContainer() {
         <Container className={styles.containerTop}>
         <Row className={styles.sectionHeader}>
             <Col xs={12} md={6} className={styles.sectionTitle}>
-            
+              <div className={styles.sectionT}>
+
               <h2>La forma más <span className={styles.spanHeader}>fácil</span><br></br>
               de empezar tu<br></br> tienda online <br></br>
               desde tu <span className={styles.spanHeader}>móvil</span></h2>
               
               
-              <button onClick={() => router.push('/register')} className="">¡Comienza ya!</button>
+              <button onClick={() => router.push('/register')} className= {styles.btnCustom}>¡Comienza ya!</button>
+
+
+              </div>
+              
+              
+            
+             
              
             </Col>
             <Col xs={12} md={6} className="">
-            <img className="img-fluid" src="/principal.svg" />
+            <img className={styles.imgFluid} src="/principal.svg" />
             
               
               

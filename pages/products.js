@@ -47,7 +47,7 @@ export default function Products() {
 
         </Row>
         <Row>
-          <Col xs={12} md={6}>
+          <Col >
             <CardComponent />
 
           </Col>
