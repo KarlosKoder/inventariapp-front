@@ -18,6 +18,7 @@ function NavComponent() {
                             <div onClick={() => router.push('/')}>Inicio</div>
                             <div onClick={() => router.push('/register')}>Registrate</div>
                             <div onClick={() => router.push('/signup')}>Inicia sesión</div>
+                            <div onClick={() => router.push('/products')}>productos</div>
                             
 
                         </div>
