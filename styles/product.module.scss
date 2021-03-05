@@ -1,3 +1,41 @@
-.productitle {
+.productBottom{
     display:flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
 }
+
+
+
+
+
+.productTop {
+    display:flex;
+    justify-items: center;
+}
+
+
+  
+.btnCustom {
+    background-color: #E88F14;
+    color: white;
+    border:#E88F14;
+    border-radius: 3px;
+    margin-right: 8px;
+    font-size: 13px;
+    
+
+   
+  }
+
+  
+
+
+  .btnCustom:hover {
+    background-color: #db8e13;
+    color: white;
+  }
+  
+
+  .productBottom {
+      display: flex;
+  }

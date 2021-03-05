@@ -49,8 +49,8 @@ export default function CardComponent({props}) {
 
     const renderCard = (card, index) => {
         return (
-            <div className={`p-1 ${styles.card} d-flex`}>   
-            <Card>
+            <div className={`p-1 ${styles.card} `}>   
+            <Card className={`box ${styles.cardComponent}`}>
                 <Card.Img variant="top" src={`${card.image_link}`}/>
                 <Card.Body className={`p-2 ${styles.bodyCard}`}>
                     <Card.Title className={styles.title}>{card.title}</Card.Title>

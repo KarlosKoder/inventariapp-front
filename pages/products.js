@@ -28,26 +28,30 @@ export default function Products() {
 
       <NavComponent />
 
-      <Container>
+      <Container className={styles.products}>
         <Row>
-          <Col xs={12} md={12}>
+          <Col xs={3} md={6} className={styles.productTop}>
             <div className={styles.productHeader}>
-              <button className="">Nuevo Producto</button>
-              <button className="">Crea tu CSV</button>
-
-              <h2>
-                Tus productos
-                </h2>
-
+              <button className = {styles.btnCustom}>Nuevo Producto</button>
+              <button className = {styles.btnCustom}>Crea tu CSV</button>
             </div>
 
+            <Col >
+            <h2>
+                Tus productos
+                </h2>
+            </Col>
+            <Col >
             <SearchComponent />
+            </Col>
+
+           
 
           </Col>
 
         </Row>
-        <Row>
-          <Col >
+        <Row lassName={styles.productBottom}>
+          <Col>
             <CardComponent />
 
           </Col>
