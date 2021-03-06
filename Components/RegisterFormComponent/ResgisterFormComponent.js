@@ -3,8 +3,6 @@ import {Form, Button} from "react-bootstrap"
 import styles from "../../styles/register.module.scss"
 import { useRouter } from 'next/router';
 
-function ResgisterFormComponent() {
-    const router = useRouter();
     return (
         <div>
             <div style={{width:"80%", marginLeft:"10%", marginTop:"10%"}}>
@@ -22,11 +20,10 @@ function ResgisterFormComponent() {
                     <Form.Label> Crea tu contraseña</Form.Label>
                     <Form.Control type="password" placeholder="Crea tu contraseña"/>
                 </Form.Group>
-                <Button onClick={() => router.push('/newproduct')} type="submit"> ¡Registrate!</Button>
+                <Button onClick={ login } type="submit"> ¡Registrate!</Button>
             </form>
             
         </div>
     )
-}
 
 export default ResgisterFormComponent
