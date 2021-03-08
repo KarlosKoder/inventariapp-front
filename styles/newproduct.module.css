@@ -1,0 +1,25 @@
+.titlenewProduct {
+  font-size: 60px;
+  color: #e88f14;
+}
+
+.label {
+  font-family: Hind;
+  font-style: normal;
+  font-size: 30px;
+  color: #396BA1;
+}
+
+.input {
+  border: 3px solid #396BA1;
+  border-radius: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.buttonproduct {
+  background-color: #396BA1;
+  border-radius: 15px;
+  margin-bottom: 10vh;
+}
+/*# sourceMappingURL=newproduct.module.css.map */

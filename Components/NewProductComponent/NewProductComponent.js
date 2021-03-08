@@ -1,68 +1,129 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { Form, Button } from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import style from'./../../styles/newproduct.module.scss'
+import Uppy from '@uppy/core'
+import Dashboard from '@uppy/dashboard'
+import Tus from '@uppy/tus'
+import Instagram from '@uppy/instagram'
+import Webcam from '@uppy/webcam'
+import { useState, useEffect } from "react";
 
 
 
 
 export const NewProductComponent= () => {
+    const [newproduct, setnewproduct] = useState({
+        elw: ""
+    })
+
+    useEffect(() => {
+        Uppy()
+          .use(Dashboard, {
+            trigger: '#select-files',
+            inline: true
+          })
+          .use(Instagram, {
+            target: Dashboard,
+            companionUrl: 'https://companion.uppy.io'
+          })
+          .use(Webcam, { target: Dashboard })
+          .use(Tus, { endpoint: 'https://tusd.tusdemo.net/files/' })
+          .on('complete', (result) => {
+            console.log('Upload result:', result)
+            console.log(result.successful[0].response.uploadURL)
+            setnewproduct({... newproduct, image_link: result.successful[0].response.uploadURL})
+            console.log(newproduct)
+          })
+        
+      }, [])
+
+    const changeHandler = (event) => {
+        let property = event.target.name
+        let value = event.target.value
+        setnewproduct({... newproduct, [property]:value})
+        console.log(newproduct)
+    }
+
     return (
         <> 
-
-
-        <div className={styles.background}></div>
-
-
         <div>
            
-            <Container >
+            <Container className="mt-5">
+                
                 <Row>
-                    <Col xs={12} md={3} >
+                    <Col xs={{offset:3}}>
+                        <div id="select-files">
+                            <link rel="stylesheet" href="https://releases.transloadit.com/uppy/v1.26.0/uppy.min.css"/>
+                        </div>
+                    </Col>
+                </Row>
 
-                        <form style={{ width: "100%", marginLeft: "10%", marginTop: "10%" }}>
+                
+                
+                <Row >
+                  
+                    <Col  xs="12">
+                        <div  className="d-flex justify-content-center">
+                            <h2 className={style.titlenewProduct}>Crea tu producto</h2>
+                        </div>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col xs={{size: 12}} sm={{size:12}} md={3} >
+
+                        <form  style={{ width: "100%" }}>
                             <Form.Group>
-                                <Form.Label> Identificador SKU</Form.Label>
-                                <Form.Control type="" placeholder="1223456" />
+                                <Form.Label className={style.label}> Identificador SKU</Form.Label>
+                                <Form.Control className={style.input} onChange={changeHandler} name="identificadorSKU" placeholder="1223456" />
                             </Form.Group>
                             <Form.Group>
-                                <Form.Label> Titulo del producto </Form.Label>
-                                <Form.Control type="" placeholder="Camiseta de algodón" />
+                                <Form.Label className={style.label}> Titulo del producto </Form.Label>
+                                <Form.Control className={style.input} onChange={changeHandler} name="title" placeholder="Camiseta de algodón" />
                             </Form.Group>
                             <Form.Group>
-                                <Form.Label> Marca </Form.Label>
-                                <Form.Control type="" placeholder="Marca del producto" />
+                                <Form.Label className={style.label}> Marca </Form.Label>
+                                <Form.Control  className={style.input} name="brand" placeholder="Marca del producto" onChange={changeHandler} />
                             </Form.Group>
                             <Form.Group>
-                                <Form.Label> Link de tu tienda </Form.Label>
-                                <Form.Control type="" placeholder="http://www.tutienda.com" />
+                                <Form.Label className={style.label}> Link de tu tienda </Form.Label>
+                                <Form.Control className={style.input} name="link" placeholder="http://www.tutienda.com" onChange={changeHandler}/>
                             </Form.Group>
 
                         </form>
 
                     </Col>
 
-                    <Col xs={12} md={6} >
-                        <form style={{ width: "100%", marginLeft: "10%", marginTop: "10%" }}>
-                            <div>
-                                <Form.Group>
-                                    <Form.Label> Precio </Form.Label>
-                                    <Form.Control type="" placeholder="9.99" />
-                                </Form.Group>
+                    <Col xs={{size:12}} md={6} >
+                        <form style={{ width: "100%"}}>
+                            <Row>
+                                <Col xs={{size:12}}>
+                                    <Form.Label className={style.label}> Precio </Form.Label>
+                                </Col>
+                            </Row>
+                            <Row>
+                                    <Col>
+                                        <Form.Group>
+                                            <Form.Control className={style.input} name="price" placeholder="9.99" onChange={changeHandler}/>
+                                        </Form.Group>
+                                    </Col>
+                                
+                                    <Col>
+                                        <Form.Group controlId="exampleForm.ControlSelect1">
 
-                                <Form.Group controlId="exampleForm.ControlSelect1">
-
-                                    <Form.Control as="select">
-                                        <option>MXN</option>
-                                        <option>USD</option>
-                                        <option>EUR</option>
-                                    </Form.Control>
-                                </Form.Group>
-
-                            </div>
+                                            <Form.Control as="select" onChange={changeHandler}>
+                                                <option>MXN</option>
+                                                <option>USD</option>
+                                                <option>EUR</option>
+                                            </Form.Control>
+                                        </Form.Group>
+                                    </Col>
+                                </Row>
+                            
                         
                             <Form.Group controlId="exampleForm.ControlTextarea1">
-                                <Form.Label>Descripción del producto</Form.Label>
-                                <Form.Control placeholder="Características del producto" as="textarea" rows={6} />
+                                <Form.Label className={style.label}>Descripción del producto</Form.Label>
+                                <Form.Control className={style.input} name="description" placeholder="Características del producto" as="textarea" rows={6}  onChange={changeHandler}/>
                             </Form.Group>
 
 
@@ -73,24 +134,16 @@ export const NewProductComponent= () => {
                     </Col>
 
                     <Col xs={12} md={3} >
-                        <form style={{ width: "100%", marginLeft: "10%", marginTop: "10%" }}>
+                        <form style={{ width: "100%" }}>
                             <div>
+                                
                                 <Form.Group>
-                                    <Form.Label> Titulo del producto </Form.Label>
-                                    <Form.Control type="" placeholder="Camiseta de algodón" />
+                                    <Form.Label className={style.label}> ¿Cuantos productos tienes? </Form.Label>
+                                    <Form.Control className={style.input} name="availability" placeholder="3" onChange={changeHandler}/>
                                 </Form.Group>
                                 <Form.Group>
-
-                                    <Form.File id="exampleFormControlFile1" label="Example file input" />
-
-                                </Form.Group>
-                                <Form.Group>
-                                    <Form.Label> ¿Cuantos productos tienes? </Form.Label>
-                                    <Form.Control type="" placeholder="3" />
-                                </Form.Group>
-                                <Form.Group>
-                                    <Form.Label>Example select</Form.Label>
-                                    <Form.Control as="select">
+                                    <Form.Label className={style.label}>Condición</Form.Label>
+                                    <Form.Control  className={style.input}as="select" name="condition" onChange={changeHandler}>
                                         <option>New</option>
                                         <option>Refurbished</option>
                                         <option>Used</option>
@@ -107,6 +160,13 @@ export const NewProductComponent= () => {
                     </Col>
 
                     
+                </Row>
+
+                <Row>
+                    <Col xs={{size:2,offset:5}}>
+                    
+                    <Button className={style.buttonproduct}  type="button">Guardar producto</Button>
+                    </Col>
                 </Row>
 
             </Container>
