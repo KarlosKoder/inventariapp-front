@@ -1,7 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {Form, Button} from "react-bootstrap"
 import styles from "../../styles/register.module.scss"
-import { useState } from 'next/router';
 
 function ResgisterFormComponent(){
     const [ userData, setUserData ] = useState({})
@@ -15,12 +14,12 @@ function ResgisterFormComponent(){
 
     const registerUser = async event => {
         event.preventDefault()
-    
         const res = await fetch(
-          'https://hooks.zapier.com/hooks/catch/123456/abcde',
+'http://localhost:8080/users',
           {
             body: JSON.stringify({
-              email: event.target.email.value
+                email : userData.inputEmail,
+                password : userData.inputPassword
             }),
             headers: {
               'Content-Type': 'application/json'
@@ -30,7 +29,8 @@ function ResgisterFormComponent(){
         )
     
         const result = await res.json()
-        // result.user => 'Ada Lovelace'
+        console.log(result)
+        
       }
 
     const login = () => {
@@ -54,16 +54,16 @@ function ResgisterFormComponent(){
 
             </div>
             
-            <form style={{width:"80%", marginLeft:"10%", marginTop:"10%"}}>
+            <form onSubmit = { registerUser } style={{width:"80%", marginLeft:"10%", marginTop:"10%"}}>
                 <Form.Group>
                     <Form.Label> Correo Electrónico</Form.Label>
-                    <Form.Control  type="email" placeholder="Ingresa tu correo"/>
+                    <Form.Control  name="inputEmail" type="email" onChange = { changeHandler } placeholder="Ingresa tu correo"/>
                 </Form.Group>
                 <Form.Group>
                     <Form.Label> Crea tu contraseña</Form.Label>
-                    <Form.Control type="password" placeholder="Crea tu contraseña"/>
+                    <Form.Control name="inputPassword" type="password" onChange = { changeHandler } placeholder="Crea tu contraseña"/>
                 </Form.Group>
-                <Button onClick={ registerUser } type="submit"> ¡Registrate!</Button>
+                <Button type="submit"> ¡Registrate!</Button>
             </form>
             
         </div>
