@@ -15,7 +15,7 @@ function ResgisterFormComponent(){
     const registerUser = async event => {
         event.preventDefault()
         const res = await fetch(
-'http://localhost:8080/users',
+            'http://localhost:8080/auth/signup',
           {
             body: JSON.stringify({
                 email : userData.inputEmail,
