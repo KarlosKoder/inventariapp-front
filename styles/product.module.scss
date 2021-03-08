@@ -1,16 +1,14 @@
-.productBottom{
-    display:flex;
-  flex-wrap: wrap;
-  justify-content:space-between;
+.texture {
+  background-image: url("../public/assets/texture.png");
+  height:fit-content;
+  background-repeat:repeat;
 }
 
+.productHeader {
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
 
-
-
-
-.productTop {
-    display:flex;
-    justify-items: center;
 }
 
 
@@ -23,11 +21,7 @@
     margin-right: 8px;
     font-size: 13px;
     
-
-   
   }
-
-  
 
 
   .btnCustom:hover {
@@ -36,6 +30,3 @@
   }
   
 
-  .productBottom {
-      display: flex;
-  }
