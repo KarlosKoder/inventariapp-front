@@ -1,3 +1,32 @@
-.productitle {
-    display:flex;
+.texture {
+  background-image: url("../public/assets/texture.png");
+  height:fit-content;
+  background-repeat:repeat;
 }
+
+.productHeader {
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+
+}
+
+
+  
+.btnCustom {
+    background-color: #E88F14;
+    color: white;
+    border:#E88F14;
+    border-radius: 3px;
+    margin-right: 8px;
+    font-size: 13px;
+    
+  }
+
+
+  .btnCustom:hover {
+    background-color: #db8e13;
+    color: white;
+  }
+  
+

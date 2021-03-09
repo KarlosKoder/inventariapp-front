@@ -14,7 +14,8 @@ function HeaderContainer() {
             <Col xs={12} md={6} className={styles.sectionTitle}>
               <div className={styles.sectionT}>
 
-              <h2>La forma más <span className={styles.spanHeader}>fácil</span><br></br>
+               
+                <h2>La forma más <span className={styles.spanHeader}>fácil</span><br></br>
               de empezar tu<br></br> tienda online <br></br>
               desde tu <span className={styles.spanHeader}>móvil</span></h2>
               
@@ -24,9 +25,6 @@ function HeaderContainer() {
 
               </div>
               
-              
-            
-             
              
             </Col>
             <Col xs={12} md={6} className="">

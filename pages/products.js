@@ -1,12 +1,57 @@
 import Head from "next/head";
 import NavComponent from "../Components/NavComponent/NavComponent";
 import { Container, Row, Col } from "react-bootstrap";
+import NavButtonComponent from "../Components/NavButtonComponent/NavButtonComponent"
 import SearchComponent from "../Components/SearchComponent/SearchComponent";
 import CardComponent from "../Components/CardComponent/CardComponent";
 import styles from "../styles/product.module.scss"
 
 
 export default function Products() {
+
+  const cardInfo = [
+    { image_link: "/backregister.svg", 
+      title:"Chamarra de mezclilla", 
+      price:"100 MXN",
+      inventory:"60 piezas", 
+      condition:"New",
+      brand:"Meeko",
+      link:"http://www.tutienda.com",
+      description:"Hermosa chamarra de mezclilla con la aplicación de encaje"
+    },
+
+    { image_link: "/backregister.svg", 
+    title:"Chamarra de mezclilla", 
+    price:"100 MXN",
+    inventory:"60 piezas", 
+    condition:"New",
+    brand:"Meeko",
+    link:"http://www.tutienda.com",
+    description:"Hermosa chamarra de mezclilla con la aplicación de encaje"
+    },
+    { image_link: "/backregister.svg", 
+    title:"Chamarra de mezclilla", 
+    price:"100 MXN",
+    inventory:"60 piezas", 
+    condition:"New",
+    brand:"Meeko",
+    link:"http://www.tutienda.com",
+    description:"Hermosa chamarra de mezclilla con la aplicación de encaje"
+    },
+    { image_link: "/backregister.svg", 
+    title:"Chamarra de mezclilla", 
+    price:"100 MXN",
+    inventory:"60 piezas", 
+    condition:"New",
+    brand:"Meeko",
+    link:"http://www.tutienda.com",
+    description:"Hermosa chamarra de mezclilla con la aplicación de encaje"
+    },
+
+
+
+];
+
   return (
     <div>
       <Head>
@@ -27,36 +72,56 @@ export default function Products() {
       </Head>
 
       <NavComponent />
+      <NavButtonComponent />
+    
 
-      <Container>
-        <Row>
-          <Col xs={12} md={12}>
-            <div className={styles.productHeader}>
-              <button className="">Nuevo Producto</button>
-              <button className="">Crea tu CSV</button>
+      
 
-              <h2>
-                Tus productos
-                </h2>
+      <Container fluid className={styles.texture}>
+      
+        <Row  className={styles.productsTop}>
 
-            </div>
+          <Container>
+            <Row>
 
-            <SearchComponent />
+              <Col xs={12} md={6} className={styles.productTop}>
+          
+                  <div className={styles.productBotton}>
+                  <button className = {styles.btnCustom}>Nuevo Producto</button>
+                  <button className = {styles.btnCustom}>Crea tu CSV</button>
 
-          </Col>
+                  </div>
 
-        </Row>
-        <Row>
-          <Col >
-            <CardComponent />
+              </Col>
+              <Col xs={{ order: 'first' }} md={6}>
+                <h2>
+                      Tus productos
+                      </h2>
+                      <SearchComponent />
 
-          </Col>
+                  
+              </Col>
+
+          </Row>
+
+          <Row>
+          {
+            cardInfo.map( item => {
+              return (
+                <Col  className={styles.productBottom} xs={12} md={3}>
+                  <CardComponent cardData = { item }/>
+                </Col>
+              )
+            })
+          }
+          
+
+            </Row>
+          </Container>
+          
 
         </Row>
       </Container>
-
-
-
 
 
       <footer className="footer">
