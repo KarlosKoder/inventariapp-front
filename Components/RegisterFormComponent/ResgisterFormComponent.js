@@ -13,9 +13,11 @@ function ResgisterFormComponent(){
     }
 
     const registerUser = async event => {
+        let nonTextHeaders = new Headers()
+
         event.preventDefault()
         const res = await fetch(
-'http://localhost:8080/users',
+            'http://ec2-18-222-219-127.us-east-2.compute.amazonaws.com:8080/auth/signup',
           {
             body: JSON.stringify({
                 email : userData.inputEmail,
