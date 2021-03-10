@@ -13,10 +13,10 @@ function NavButtonComponent() {
                     
                     <div className={`d-flex justify-content-between  ${styles.fadiv}`}>
 
-                    <Nav.Link  className={`fa fa-home  ${styles.fa}`}href="#home"></Nav.Link>
-                        <Nav.Link className={`fa fa-plus ${styles.fa}`} href="#pricing"></Nav.Link>
-                        <Nav.Link className={`fa fa-file-text   ${styles.fatext} ${styles.fa}`} href="#pricing"></Nav.Link>
-                        <Nav.Link className={`fa fa-arrow-circle-up ${styles.fa}`} href="#pricing"></Nav.Link>
+                    <Nav.Link onClick={event =>  window.location.href='/'} className={`fa fa-home  ${styles.fa}`}href="#home"></Nav.Link>
+                        <Nav.Link onClick={event =>  window.location.href='/newproduct'}  className={`fa fa-plus ${styles.fa} }`} href="#newproduct"></Nav.Link>
+                        <Nav.Link onClick={event =>  window.location.href='/products'}className={`fa fa-file-text   ${styles.fatext} ${styles.fa}`} href="#products"></Nav.Link>
+                        <Nav.Link className={`fa fa-arrow-circle-up ${styles.fa}`} href="#makecsv"></Nav.Link>
                         
                     
 

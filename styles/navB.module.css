@@ -5,6 +5,12 @@
   font-size: 25px;
 }
 
+.fa:hover {
+  background-color: orange;
+  border-radius: 50%;
+  color: #fad99b !important;
+}
+
 .fanav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14,7 +20,7 @@
           justify-content: space-evenly;
   -webkit-backdrop-filter: blur(40px) !important;
           backdrop-filter: blur(40px) !important;
-  border-top: 1px solid #b9dbf665;
+  border: 1px solid #b9dbf665;
   -webkit-box-shadow: 0px 1px 55px -12px rgba(3, 12, 26, 0.39);
   box-shadow: 0px 1px 55px -12px rgba(3, 12, 26, 0.39);
 }

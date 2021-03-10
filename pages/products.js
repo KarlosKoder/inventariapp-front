@@ -148,7 +148,7 @@ const Products = (props) => {
       </Head>
 
       <NavComponent />
-      <NavButtonComponent />
+     
     
 
       
@@ -183,10 +183,7 @@ const Products = (props) => {
 
           <Row>
           {
-            cardInfo.lenght === 0
-            ? <h2>No tienes productos</h2>
-
-            :
+           
 
 
             cardInfo.map( item => {
@@ -201,6 +198,14 @@ const Products = (props) => {
 
             </Row>
           </Container>
+
+          <Row>
+            <Col className={"d-block d-sm-none"}>
+            <NavButtonComponent />
+            
+            </Col>
+          
+          </Row>
           
 
         </Row>
