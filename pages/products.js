@@ -10,16 +10,52 @@ import styles from "../styles/product.module.scss"
 export default function Products() {
 
   const cardInfo = [
-    { image_link: "/backregister.svg", 
+    { image_link: "/assets/p1.jpg", 
       title:"Chamarra de mezclilla", 
       price:"100 MXN",
       inventory:"60 piezas", 
       condition:"New",
       brand:"Meeko",
       link:"http://www.tutienda.com",
-      description:"Hermosa chamarra de mezclilla con la aplicación de encaje"
-    },
+      description:"Hermosa chamarra de mezclilla"
+  },
 
+    { image_link: "/assets/p2.jpg", 
+    title:"Chamarra de mezclilla", 
+    price:"100 MXN",
+    inventory:"60 piezas", 
+    condition:"New",
+    brand:"Meeko",
+    link:"http://www.tutienda.com",
+    description:"Hermosa chamarra de mezclilla con la aplicación de encaje"
+    },
+    { image_link: "/assets/p3.jpg", 
+    title:"Chamarra de mezclilla", 
+    price:"100 MXN",
+    inventory:"60 piezas", 
+    condition:"New",
+    brand:"Meeko",
+    link:"http://www.tutienda.com",
+    description:"Hermosa chamarra de mezclilla con la aplicación de encaje"
+    },
+    { image_link: "/assets/p4.jpg", 
+    title:"Chamarra de mezclilla", 
+    price:"100 MXN",
+    inventory:"60 piezas", 
+    condition:"New",
+    brand:"Meeko",
+    link:"http://www.tutienda.com",
+    description:"Hermosa chamarra de mezclilla con la aplicación de encaje"
+    },
+    { image_link: "/backregister.svg", 
+    title:"Chamarra de mezclilla", 
+    price:"100 MXN",
+    inventory:"60 piezas", 
+    condition:"New",
+    brand:"Meeko",
+    link:"http://www.tutienda.com",
+    description:"Hermosa chamarra de mezclilla con la aplicación de encaje"
+    },
     { image_link: "/backregister.svg", 
     title:"Chamarra de mezclilla", 
     price:"100 MXN",
@@ -46,11 +82,51 @@ export default function Products() {
     brand:"Meeko",
     link:"http://www.tutienda.com",
     description:"Hermosa chamarra de mezclilla con la aplicación de encaje"
+    },
+    { image_link: "/backregister.svg", 
+    title:"Chamarra de mezclilla", 
+    price:"100 MXN",
+    inventory:"60 piezas", 
+    condition:"New",
+    brand:"Meeko",
+    link:"http://www.tutienda.com",
+    description:"Hermosa chamarra de mezclilla con la aplicación de encaje"
+    },
+    { image_link: "/backregister.svg", 
+    title:"Chamarra de mezclilla", 
+    price:"100 MXN",
+    inventory:"60 piezas", 
+    condition:"New",
+    brand:"Meeko",
+    link:"http://www.tutienda.com",
+    description:"Hermosa chamarra de mezclilla con la aplicación de encaje"
+    },
+    { image_link: "/backregister.svg", 
+    title:"Chamarra de mezclilla", 
+    price:"100 MXN",
+    inventory:"60 piezas", 
+    condition:"New",
+    brand:"Meeko",
+    link:"http://www.tutienda.com",
+    description:"Hermosa chamarra de mezclilla con la aplicación de encaje,"
+    },
+    { image_link: "/backregister.svg", 
+    title:"Chamarra de mezclilla", 
+    price:"100 MXN",
+    inventory:"60 piezas", 
+    condition:"New",
+    brand:"Meeko",
+    link:"http://www.tutienda.com",
+    description:"Hermosa chamarra de mezclilla con la aplicación de encaje,Hermosa chamarra de mezclilla con la aplicación de encaje,Hermosa chamarra de mezclilla con la aplicación de encaje,Hermosa chamarra de mezclilla con la aplicación de encaje,Hermosa chamarra de mezclilla con la aplicación de encaje,Hermosa chamarra de mezclilla con la aplicación de encaje"
     },
 
 
 
 ];
+
+const Products = (props) => {
+  const [products, setProducts] = useState (props.products)
+}
 
   return (
     <div>
@@ -93,7 +169,8 @@ export default function Products() {
                   </div>
 
               </Col>
-              <Col xs={{ order: 'first' }} md={6}>
+              <Col md={6}>
+                
                 <h2>
                       Tus productos
                       </h2>
@@ -106,6 +183,12 @@ export default function Products() {
 
           <Row>
           {
+            cardInfo.lenght === 0
+            ? <h2>No tienes productos</h2>
+
+            :
+
+
             cardInfo.map( item => {
               return (
                 <Col  className={styles.productBottom} xs={12} md={3}>

@@ -1,0 +1,22 @@
+.fa {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: auto;
+    font-size: 25px;
+    
+    
+  }
+.fanav {
+ 
+  display: flex;
+  justify-content: space-evenly;
+  backdrop-filter: blur(40px) !important;
+  border-top: 1px solid #b9dbf665;
+  -webkit-box-shadow: 0px 1px 55px -12px rgba(3,12,26,0.39);
+  -moz-box-shadow: 0px 1px 55px -12px rgba(3,12,26,0.39);
+  box-shadow: 0px 1px 55px -12px rgba(3,12,26,0.39);
+}
+
+.fatext{
+    font-size: 22px;
+}
