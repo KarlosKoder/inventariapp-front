@@ -1,4 +1,9 @@
 
+.cardComponent{
+ 
+    box-shadow: 0 4px 8px 0 rgba(146, 146, 145, 0.2), 0 6px 20px 0 rgba(241, 240, 240, 0.15);
+}
+
 
 .image_link {
     height: 10px;
@@ -9,6 +14,7 @@
 
 .bodyCard{
     font-size: 15px;
+    
 
 }
 
@@ -30,4 +36,13 @@
 
 .dtitle {
     font-size: 10px;
+}
+
+.cardTop {
+    
+        width: 100%;
+        height: 15vw;
+        object-fit: cover;
+        
+    
 }
