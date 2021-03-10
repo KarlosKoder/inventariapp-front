@@ -27,9 +27,9 @@ function NavComponent() {
 
                             </Nav>
                             <Form  inline className={styles.main}>
-                                <Nav.Link className={styles.mainText} onClick={() => router.push('/')}>Inicio</Nav.Link>
-                                <Nav.Link className={styles.mainText}  onClick={() => router.push('/register')}>Registrate</Nav.Link>
-                                <Nav.Link className={styles.mainText}  onClick={() => router.push('/register')}>¡Comienza ya!</Nav.Link> 
+                            <Nav.Link className={styles.mainText} onClick={() => router.push('/')}>Inicio</Nav.Link>
+                                <Nav.Link className={styles.mainText}  onClick={() => router.push('/login')}>Inicia Sesión</Nav.Link>
+                                <Nav.Link className={styles.mainText}  onClick={() => router.push('/register')}>!Registrate!</Nav.Link> 
                                 
                             </Form>
                         </Navbar.Collapse>
