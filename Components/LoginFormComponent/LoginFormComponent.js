@@ -40,12 +40,10 @@ function LoginFormComponent(){
     const bringAccess = ( loginData ) => {
         console.log( loginData )
         let { success, message, data }  = loginData;
-        // localStorage.setItem("token",data.token)
-        // localStorage.setItem("role",role)
+        localStorage.setItem("token",data.token)
         window.location.href = '/products'
     }
-     let token = localStorage.getItem("token")
-     console.log( token )
+    
     return (
         <div>
             <div style={{width:"80%", marginLeft:"10%", marginTop:"10%"}}>
@@ -53,7 +51,7 @@ function LoginFormComponent(){
               <h5>Inicia sesión</h5>
 
             </div>
-            { !token && <p>Debes iniciar sesión para ver esta sección</p> }
+           
             <form onSubmit = { loginUser } style={{width:"80%", marginLeft:"10%", marginTop:"10%"}}>
                 <Form.Group>
                     <Form.Label> Correo Electrónico</Form.Label>
