@@ -35,43 +35,6 @@ function ResgisterFormComponent(){
         
       }
 
-      const loginUser = async event => {
-        let nonTextHeaders = new Headers()
-
-        event.preventDefault()
-        const res = await fetch(
-            'http://ec2-18-222-219-127.us-east-2.compute.amazonaws.com:8080/auth/login',
-          {
-            body: JSON.stringify({
-                email : userData.inputEmail,
-                password : userData.inputPassword
-            }),
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            method: 'POST'
-          }
-        )
-    
-        const result = await res.json()
-        console.log(result)
-        window.location.href = '/home'
-        
-      }
-
-    const login = () => {
-        let response = api.login(userData)
-        console.log( response )
-        response.status === "error" ? setLoginError( response ) : bringAccess( response )
-    }
-
-    const bringAccess = ( loginData ) => {
-        console.log( loginData )
-        let { token, role } = loginData;
-        localStorage.setItem("token",token)
-        localStorage.setItem("role",role)
-        window.location.href = '/home'
-    }
     return (
         <div>
             <div style={{width:"80%", marginLeft:"10%", marginTop:"10%"}}>

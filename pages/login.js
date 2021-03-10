@@ -1,6 +1,6 @@
 import NavComponent from "../Components/NavComponent/NavComponent";
 import Head from "next/head";
-import LoginComponent from "../Components/RegisterComponent/LoginComponent"
+import LoginComponent from "../Components/LoginComponent/LoginComponent"
 
 export const Login = () => {
     return (

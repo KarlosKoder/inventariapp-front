@@ -32,22 +32,17 @@ function LoginFormComponent(){
     
         const result = await res.json()
         console.log(result)
-        window.location.href = '/home'
+
+        res.status === "error" ? setLoginError( result ) : bringAccess( result )
         
       }
-
-    const login = () => {
-        let response = api.login(userData)
-        console.log( response )
-        response.status === "error" ? setLoginError( response ) : bringAccess( response )
-    }
 
     const bringAccess = ( loginData ) => {
         console.log( loginData )
         let { token, role } = loginData;
         localStorage.setItem("token",token)
         localStorage.setItem("role",role)
-        window.location.href = '/home'
+        window.location.href = '/products'
     }
     return (
         <div>
@@ -56,7 +51,7 @@ function LoginFormComponent(){
               <h5>Inicia sesión</h5>
 
             </div>
-            
+            { !token && <p>Debes iniciar sesión para ver esta sección</p> }
             <form onSubmit = { loginUser } style={{width:"80%", marginLeft:"10%", marginTop:"10%"}}>
                 <Form.Group>
                     <Form.Label> Correo Electrónico</Form.Label>
@@ -68,6 +63,10 @@ function LoginFormComponent(){
                 </Form.Group>
                 <Button type="submit"> Entrar</Button>
             </form>
+            {
+                loginError && <div className="card p-3 border rounded bg-danger text-white">{ loginError.errorMsg }</div>
+            }
+                
             
         </div>
     )
