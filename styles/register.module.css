@@ -1,4 +1,10 @@
 @charset "UTF-8";
+.containerTop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 /* Aquí está el Header  */
 .background {
   background-image: url("../public/assets/bgr.png");
