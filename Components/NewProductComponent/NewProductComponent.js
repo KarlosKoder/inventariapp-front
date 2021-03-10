@@ -14,8 +14,25 @@ import { useState, useEffect } from "react";
 
 export const NewProductComponent= () => {
     const [newproduct, setnewproduct] = useState({
-        elw: ""
+        
     })
+    const [dataExist, setdataExist] = useState(false)
+    
+    const saveProductHandler = () => {
+        console.log(newproduct)
+        fetch(`http://localhost:8080/id/products`,{
+        method: "POST",
+        body: JSON.stringify(newproduct),
+        headers: {
+            'Content-Type': 'application/json'
+          }
+        })
+        .then(response => response.json())
+        .then(json => {
+        console.log(json)
+        })
+    }
+
 
     useEffect(() => {
         Uppy()
@@ -36,7 +53,7 @@ export const NewProductComponent= () => {
             console.log(newproduct)
           })
         
-      }, [])
+      }, [dataExist])
 
     const changeHandler = (event) => {
         let property = event.target.name
@@ -165,7 +182,7 @@ export const NewProductComponent= () => {
                 <Row>
                     <Col xs={{size:2,offset:5}}>
                     
-                    <Button className={style.buttonproduct}  type="button">Guardar producto</Button>
+                    <Button className={style.buttonproduct} onClick={saveProductHandler}  type="button">Guardar producto</Button>
                     </Col>
                 </Row>
 

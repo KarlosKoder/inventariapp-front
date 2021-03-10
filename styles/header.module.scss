@@ -8,16 +8,18 @@
 
 .background {
     background-image: url("../public/assets/bg.png");
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
     position: fixed;
     z-index: -1;
     top: 0px;
+    background-repeat: no-repeat;
   }
+
   .texture {
     background-image: url("../public/assets/texture.png");
     background-attachment: fixed;
-    height: 100vh;
+    height: 90vh;
     background-repeat: no-repeat;
   }
   
@@ -34,18 +36,17 @@
     min-width: 90vw;
     min-height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+
   }
   /* texto */
 
-  .sectionT {
-   align-content: center;
  
-  }
   
   .sectionT > h2 {
    min-width: 20%;
+   font-size: 45px;
     font-weight: 300;
     color: #E88F14;
     

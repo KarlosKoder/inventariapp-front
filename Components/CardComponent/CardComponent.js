@@ -3,83 +3,34 @@ import Image from "next/image"
 import {Card} from "react-bootstrap"
 import styles from "../../styles/card.module.scss"
 
-export default function CardComponent({props}) {
-    const cardInfo = [
-        { image_link: "/backregister.svg", 
-          title:"Chamarra de mezclilla", 
-          price:"100 MXN",
-          inventory:"60 piezas", 
-          condition:"New",
-          brand:"Meeko",
-          link:"http://www.tutienda.com",
-          description:"Hermosa chamarra de mezclilla con la aplicación de encaje"
-        },
-
-        { image_link: "/backregister.svg", 
-        title:"Chamarra de mezclilla", 
-        price:"100 MXN",
-        inventory:"60 piezas", 
-        condition:"New",
-        brand:"Meeko",
-        link:"http://www.tutienda.com",
-        description:"Hermosa chamarra de mezclilla con la aplicación de encaje"
-        },
-        { image_link: "/backregister.svg", 
-        title:"Chamarra de mezclilla", 
-        price:"100 MXN",
-        inventory:"60 piezas", 
-        condition:"New",
-        brand:"Meeko",
-        link:"http://www.tutienda.com",
-        description:"Hermosa chamarra de mezclilla con la aplicación de encaje"
-        },
-        { image_link: "/backregister.svg", 
-        title:"Chamarra de mezclilla", 
-        price:"100 MXN",
-        inventory:"60 piezas", 
-        condition:"New",
-        brand:"Meeko",
-        link:"http://www.tutienda.com",
-        description:"Hermosa chamarra de mezclilla con la aplicación de encaje"
-        },
-
-
-
-    ];
-
-    const renderCard = (card, index) => {
-        return (
-            <div className={`p-1 ${styles.card} d-flex`}>   
-            <Card>
-                <Card.Img variant="top" src={`${card.image_link}`}/>
-                <Card.Body className={`p-2 ${styles.bodyCard}`}>
-                    <Card.Title className={styles.title}>{card.title}</Card.Title>
-                    <div className={styles.bodysubtitle}>
-                    <Card.Subtitle className={`mb-2 text-muted  ${styles.subtitle}`}>{card.price}</Card.Subtitle>
-                    <Card.Subtitle className={`mb-2 text-muted ${styles.subtitle}`}>{card.inventory}</Card.Subtitle>
-                    <Card.Subtitle className={`mb-2 text-muted ${styles.subtitle}`}>{card.condition}</Card.Subtitle>
-                    </div>
-                    <div className={styles.bodyTwosubtitle}>
-                    <Card.Subtitle className={`mb-2 text-muted ${styles.subtitle}`}>{card.brand}</Card.Subtitle>
-                    <Card.Subtitle className={`mb-2 text-muted ${styles.subtitle}`}>{card.link}</Card.Subtitle>
-                    </div>
+export default function CardComponent(props) {
+    let { price, inventory, condition, brand, link, title, image_link, description } = props.cardData
+    return (
+        <div className={`p-1 ${styles.card} `}>   
+        <Card className={`box ${styles.cardComponent}`}>
+            <Card.Img variant="top" src={`${image_link}`}/>
+            <Card.Body className={`p-2 ${styles.bodyCard}`}>
+                <Card.Title className={styles.title}>{title}</Card.Title>
+                <div className={styles.bodysubtitle}>
+                <Card.Subtitle className={`mb-2 text-muted  ${styles.subtitle}`}>{price}</Card.Subtitle>
+                <Card.Subtitle className={`mb-2 text-muted ${styles.subtitle}`}>{inventory}</Card.Subtitle>
+                <Card.Subtitle className={`mb-2 text-muted ${styles.subtitle}`}>{condition}</Card.Subtitle>
+                </div>
+                <div className={styles.bodyTwosubtitle}>
+                <Card.Subtitle className={`mb-2 text-muted ${styles.subtitle}`}>{brand}</Card.Subtitle>
+                <Card.Subtitle className={`mb-2 text-muted ${styles.subtitle}`}>{link}</Card.Subtitle>
+                </div>
+            
+                <Card.Text  className={styles.dtitle}>
+                    {description}
+                </Card.Text>
                 
-                    <Card.Text  className={styles.dtitle}>
-                        {card.description}
-                    </Card.Text>
-                    
-                </Card.Body>
-            </Card>
+            </Card.Body>
+        </Card>
 
-        </div>
+    </div>
 
-        );
-
-    };
-
-    return <div>{(cardInfo.map(renderCard))}</div>
-
-
+    );
     
 }
 
