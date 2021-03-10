@@ -10,127 +10,140 @@ import styles from "../styles/product.module.scss"
 export default function Products() {
 
   const cardInfo = [
-    { image_link: "/assets/p1.jpg", 
-      title:"Chamarra de mezclilla", 
-      price:"100 MXN",
-      inventory:"60 piezas", 
-      condition:"New",
-      brand:"Meeko",
-      link:"http://www.tutienda.com",
-      description:"Hermosa chamarra de mezclilla"
-  },
-
-    { image_link: "/assets/p2.jpg", 
-    title:"Chamarra de mezclilla", 
-    price:"100 MXN",
-    inventory:"60 piezas", 
-    condition:"New",
-    brand:"Meeko",
-    link:"http://www.tutienda.com",
-    description:"Hermosa chamarra de mezclilla con la aplicación de encaje"
-    },
-    { image_link: "/assets/p3.jpg", 
-    title:"Chamarra de mezclilla", 
-    price:"100 MXN",
-    inventory:"60 piezas", 
-    condition:"New",
-    brand:"Meeko",
-    link:"http://www.tutienda.com",
-    description:"Hermosa chamarra de mezclilla con la aplicación de encaje"
-    },
-    { image_link: "/assets/p4.jpg", 
-    title:"Chamarra de mezclilla", 
-    price:"100 MXN",
-    inventory:"60 piezas", 
-    condition:"New",
-    brand:"Meeko",
-    link:"http://www.tutienda.com",
-    description:"Hermosa chamarra de mezclilla con la aplicación de encaje"
-    },
-    { image_link: "/backregister.svg", 
-    title:"Chamarra de mezclilla", 
-    price:"100 MXN",
-    inventory:"60 piezas", 
-    condition:"New",
-    brand:"Meeko",
-    link:"http://www.tutienda.com",
-    description:"Hermosa chamarra de mezclilla con la aplicación de encaje"
-    },
-    { image_link: "/backregister.svg", 
-    title:"Chamarra de mezclilla", 
-    price:"100 MXN",
-    inventory:"60 piezas", 
-    condition:"New",
-    brand:"Meeko",
-    link:"http://www.tutienda.com",
-    description:"Hermosa chamarra de mezclilla con la aplicación de encaje"
-    },
-    { image_link: "/backregister.svg", 
-    title:"Chamarra de mezclilla", 
-    price:"100 MXN",
-    inventory:"60 piezas", 
-    condition:"New",
-    brand:"Meeko",
-    link:"http://www.tutienda.com",
-    description:"Hermosa chamarra de mezclilla con la aplicación de encaje"
-    },
-    { image_link: "/backregister.svg", 
-    title:"Chamarra de mezclilla", 
-    price:"100 MXN",
-    inventory:"60 piezas", 
-    condition:"New",
-    brand:"Meeko",
-    link:"http://www.tutienda.com",
-    description:"Hermosa chamarra de mezclilla con la aplicación de encaje"
-    },
-    { image_link: "/backregister.svg", 
-    title:"Chamarra de mezclilla", 
-    price:"100 MXN",
-    inventory:"60 piezas", 
-    condition:"New",
-    brand:"Meeko",
-    link:"http://www.tutienda.com",
-    description:"Hermosa chamarra de mezclilla con la aplicación de encaje"
-    },
-    { image_link: "/backregister.svg", 
-    title:"Chamarra de mezclilla", 
-    price:"100 MXN",
-    inventory:"60 piezas", 
-    condition:"New",
-    brand:"Meeko",
-    link:"http://www.tutienda.com",
-    description:"Hermosa chamarra de mezclilla con la aplicación de encaje"
-    },
-    { image_link: "/backregister.svg", 
-    title:"Chamarra de mezclilla", 
-    price:"100 MXN",
-    inventory:"60 piezas", 
-    condition:"New",
-    brand:"Meeko",
-    link:"http://www.tutienda.com",
-    description:"Hermosa chamarra de mezclilla con la aplicación de encaje,"
-    },
-    { image_link: "/backregister.svg", 
-    title:"Chamarra de mezclilla", 
-    price:"100 MXN",
-    inventory:"60 piezas", 
-    condition:"New",
-    brand:"Meeko",
-    link:"http://www.tutienda.com",
-    description:"Hermosa chamarra de mezclilla con la aplicación de encaje,Hermosa chamarra de mezclilla con la aplicación de encaje,Hermosa chamarra de mezclilla con la aplicación de encaje,Hermosa chamarra de mezclilla con la aplicación de encaje,Hermosa chamarra de mezclilla con la aplicación de encaje,Hermosa chamarra de mezclilla con la aplicación de encaje"
+    {
+      image_link: "/assets/p1.jpg",
+      title: "Chamarra de mezclilla",
+      price: "100 MXN",
+      inventory: "60 piezas",
+      condition: "New",
+      brand: "Meeko",
+      link: "http://www.tutienda.com",
+      description: "Hermosa chamarra de mezclilla"
     },
 
+    {
+      image_link: "/assets/p2.jpg",
+      title: "Chamarra de mezclilla",
+      price: "100 MXN",
+      inventory: "60 piezas",
+      condition: "New",
+      brand: "Meeko",
+      link: "http://www.tutienda.com",
+      description: "Hermosa chamarra de mezclilla con la aplicación de encaje"
+    },
+    {
+      image_link: "/assets/p3.jpg",
+      title: "Chamarra de mezclilla",
+      price: "100 MXN",
+      inventory: "60 piezas",
+      condition: "New",
+      brand: "Meeko",
+      link: "http://www.tutienda.com",
+      description: "Hermosa chamarra de mezclilla con la aplicación de encaje"
+    },
+    {
+      image_link: "/assets/p4.jpg",
+      title: "Chamarra de mezclilla",
+      price: "100 MXN",
+      inventory: "60 piezas",
+      condition: "New",
+      brand: "Meeko",
+      link: "http://www.tutienda.com",
+      description: "Hermosa chamarra de mezclilla con la aplicación de encaje"
+    },
+    {
+      image_link: "/backregister.svg",
+      title: "Chamarra de mezclilla",
+      price: "100 MXN",
+      inventory: "60 piezas",
+      condition: "New",
+      brand: "Meeko",
+      link: "http://www.tutienda.com",
+      description: "Hermosa chamarra de mezclilla con la aplicación de encaje"
+    },
+    {
+      image_link: "/backregister.svg",
+      title: "Chamarra de mezclilla",
+      price: "100 MXN",
+      inventory: "60 piezas",
+      condition: "New",
+      brand: "Meeko",
+      link: "http://www.tutienda.com",
+      description: "Hermosa chamarra de mezclilla con la aplicación de encaje"
+    },
+    {
+      image_link: "/backregister.svg",
+      title: "Chamarra de mezclilla",
+      price: "100 MXN",
+      inventory: "60 piezas",
+      condition: "New",
+      brand: "Meeko",
+      link: "http://www.tutienda.com",
+      description: "Hermosa chamarra de mezclilla con la aplicación de encaje"
+    },
+    {
+      image_link: "/backregister.svg",
+      title: "Chamarra de mezclilla",
+      price: "100 MXN",
+      inventory: "60 piezas",
+      condition: "New",
+      brand: "Meeko",
+      link: "http://www.tutienda.com",
+      description: "Hermosa chamarra de mezclilla con la aplicación de encaje"
+    },
+    {
+      image_link: "/backregister.svg",
+      title: "Chamarra de mezclilla",
+      price: "100 MXN",
+      inventory: "60 piezas",
+      condition: "New",
+      brand: "Meeko",
+      link: "http://www.tutienda.com",
+      description: "Hermosa chamarra de mezclilla con la aplicación de encaje"
+    },
+    {
+      image_link: "/backregister.svg",
+      title: "Chamarra de mezclilla",
+      price: "100 MXN",
+      inventory: "60 piezas",
+      condition: "New",
+      brand: "Meeko",
+      link: "http://www.tutienda.com",
+      description: "Hermosa chamarra de mezclilla con la aplicación de encaje"
+    },
+    {
+      image_link: "/backregister.svg",
+      title: "Chamarra de mezclilla",
+      price: "100 MXN",
+      inventory: "60 piezas",
+      condition: "New",
+      brand: "Meeko",
+      link: "http://www.tutienda.com",
+      description: "Hermosa chamarra de mezclilla con la aplicación de encaje,"
+    },
+    {
+      image_link: "/backregister.svg",
+      title: "Chamarra de mezclilla",
+      price: "100 MXN",
+      inventory: "60 piezas",
+      condition: "New",
+      brand: "Meeko",
+      link: "http://www.tutienda.com",
+      description: "Hermosa chamarra de mezclilla con la aplicación de encaje,Hermosa chamarra de mezclilla con la aplicación de encaje,Hermosa chamarra de mezclilla con la aplicación de encaje,Hermosa chamarra de mezclilla con la aplicación de encaje,Hermosa chamarra de mezclilla con la aplicación de encaje,Hermosa chamarra de mezclilla con la aplicación de encaje"
+    },
 
 
-];
 
-const Products = (props) => {
-  const [products, setProducts] = useState (props.products)
-}
+  ];
+
+  const Products = (props) => {
+    const [products, setProducts] = useState(props.products)
+  }
 
   return (
     <div>
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>InventariApp</title>
         <link rel="icon" href="/favicon.ico" />
         <link
@@ -147,66 +160,70 @@ const Products = (props) => {
         ></link>
       </Head>
 
-      <NavComponent />
-     
-    
+      <NavComponent className={styles.navComp} />
 
-      
+
+
+
 
       <Container fluid className={styles.texture}>
-      
-        <Row  className={styles.productsTop}>
 
-          <Container>
-            <Row>
 
-              <Col xs={12} md={6} className={styles.productTop}>
-          
-                  <div className={styles.productBotton}>
-                  <button className = {styles.btnCustom}>Nuevo Producto</button>
-                  <button className = {styles.btnCustom}>Crea tu CSV</button>
+        <Row className={styles.productsTop}>
 
-                  </div>
+          <Container fluid>
+            <Row className={styles.productHeader}>
+
+              <Col className={`d-none d-sm-block ${styles.productTop}`}>
+
+                <div className={styles.productBotton}>
+                  <button className={styles.btnCustom}>Nuevo Producto</button>
+                  <button className={styles.btnCustom}>Crea tu CSV</button>
+
+                </div>
 
               </Col>
               <Col md={6}>
-                
-                <h2>
-                      Tus productos
-                      </h2>
-                      <SearchComponent />
 
-                  
+                <h2>
+                  Tus productos
+                      </h2>
+
               </Col>
 
-          </Row>
+              <Col>
+                <SearchComponent />
+              </Col>
 
-          <Row>
-          {
-           
+            </Row>
 
 
-            cardInfo.map( item => {
-              return (
-                <Col  className={styles.productBottom} xs={12} md={3}>
-                  <CardComponent cardData = { item }/>
-                </Col>
-              )
-            })
-          }
-          
+            <Row>
+              {
+
+
+
+                cardInfo.map(item => {
+                  return (
+                    <Col className={styles.productBottom} xs={12} md={3}>
+                      <CardComponent cardData={item} />
+                    </Col>
+                  )
+                })
+              }
+
 
             </Row>
           </Container>
 
           <Row>
             <Col className={"d-block d-sm-none"}>
-            <NavButtonComponent />
-            
+              <NavButtonComponent />
+
             </Col>
-          
+
           </Row>
-          
+
 
         </Row>
       </Container>
