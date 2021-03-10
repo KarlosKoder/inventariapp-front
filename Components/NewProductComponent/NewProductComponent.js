@@ -20,7 +20,7 @@ export const NewProductComponent= () => {
     
     const saveProductHandler = () => {
         console.log(newproduct)
-        fetch(`http://localhost:8080/products`,{
+        fetch(`http://localhost:8080/id/products`,{
         method: "POST",
         body: JSON.stringify(newproduct),
         headers: {
