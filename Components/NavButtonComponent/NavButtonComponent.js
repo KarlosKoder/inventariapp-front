@@ -1,22 +1,30 @@
 import React from 'react'
 import { useRouter } from 'next/router';
 import { Col, Container, Row, Navbar, Nav, Form, FormControl, Button } from "react-bootstrap";
-import styles from "../../styles/nav.module.scss"
+import styles from "../../styles/navB.module.scss"
 
 function NavButtonComponent() {
     return (
         <>
             <Container className="p-0 ">
-                <Navbar bg="light" expand="lg">
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar fixed="bottom"bg="light" className={`justify-content-center  ${styles.fanav}`} >
+                  
+                    <Nav className={styles.facont}>
                     
-                        <Nav className="">
-                            <Nav.Link href="#home">Home</Nav.Link>
-                            <Nav.Link href="#link">Link</Nav.Link>
-                            
-                        </Nav>
+                    <div className={`d-flex justify-content-between  ${styles.fadiv}`}>
+
+                    <Nav.Link onClick={event =>  window.location.href='/'} className={`fa fa-home  ${styles.fa}`}href="#home"></Nav.Link>
+                        <Nav.Link onClick={event =>  window.location.href='/newproduct'}  className={`fa fa-plus ${styles.fa} }`} href="#newproduct"></Nav.Link>
+                        <Nav.Link onClick={event =>  window.location.href='/products'}className={`fa fa-file-text   ${styles.fatext} ${styles.fa}`} href="#products"></Nav.Link>
+                        <Nav.Link className={`fa fa-arrow-circle-up ${styles.fa}`} href="#makecsv"></Nav.Link>
+                        
+                    
+
+                    </div>
                       
-                   
+                    </Nav>
+
+
                 </Navbar>
             </Container>
         </>
