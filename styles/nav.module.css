@@ -2,45 +2,22 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-<<<<<<< HEAD
-=======
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
->>>>>>> e385e69eb5e7f032c518f6ff6a1bc1f654c8742b
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
   font-size: 10px;
-<<<<<<< HEAD
-}
-
-.mainText {
-  margin: 25px;
-  cursor: pointer;
-}
-
-.mainText div:hover {
-  background-color: #FFDA1D !important;
-=======
   margin-top: 20px;
 }
 
 .main :hover {
   background-color: #FFDA1D;
   color: white;
->>>>>>> e385e69eb5e7f032c518f6ff6a1bc1f654c8742b
   border-radius: 2px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-<<<<<<< HEAD
-}
-
-.imgFluid {
-  width: 60%;
-  height: 60%;
-=======
->>>>>>> e385e69eb5e7f032c518f6ff6a1bc1f654c8742b
 }
 /*# sourceMappingURL=nav.module.css.map */

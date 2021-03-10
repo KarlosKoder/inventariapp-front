@@ -33,17 +33,19 @@ function LoginFormComponent(){
         const result = await res.json()
         console.log(result)
 
-        res.status === "error" ? setLoginError( result ) : bringAccess( result )
+        result.status === "error" ? setLoginError( result ) : bringAccess( result )
         
       }
 
     const bringAccess = ( loginData ) => {
         console.log( loginData )
-        let { token, role } = loginData;
-        localStorage.setItem("token",token)
-        localStorage.setItem("role",role)
+        let { success, message, data }  = loginData;
+        // localStorage.setItem("token",data.token)
+        // localStorage.setItem("role",role)
         window.location.href = '/products'
     }
+     let token = localStorage.getItem("token")
+     console.log( token )
     return (
         <div>
             <div style={{width:"80%", marginLeft:"10%", marginTop:"10%"}}>
@@ -66,7 +68,6 @@ function LoginFormComponent(){
             {
                 loginError && <div className="card p-3 border rounded bg-danger text-white">{ loginError.errorMsg }</div>
             }
-                
             
         </div>
     )
