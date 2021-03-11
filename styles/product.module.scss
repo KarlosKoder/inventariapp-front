@@ -4,14 +4,25 @@
   background-repeat:repeat;
 }
 
+.icon {
+  display: flex;
+}
+.productButton {
+  padding-left: 0;
+  
+  color: #E88F14;
+  font-size: 25px !important;
+}
 
-  @media (max-width: 1200px) {
-    .navComp {
-      visibility: hidden;
-  }
-  }
- 
+.productBottom {
+  padding-left: 0;
+  padding-right: 0;
+}
 
+.divButtom {
+background-color: white !important;
+height: 30px !important;
+}
 
 .productHeader {
   
@@ -19,9 +30,7 @@
   align-items: center;
 
 }
-
-
-  
+ 
 .btnCustom {
     background-color: #E88F14;
     height: 28px;
@@ -40,4 +49,9 @@
     color: white;
   }
   
+
+  .search {
+      padding-left: 0;
+      padding-right: 0;
+  }
 

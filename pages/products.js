@@ -1,6 +1,7 @@
 import Head from "next/head";
 import NavComponent from "../Components/NavComponent/NavComponent";
-import { Container, Row, Col } from "react-bootstrap";
+import { Col, Container, Row, Navbar, Nav, Form, FormControl, Button } from "react-bootstrap";
+import { GrDocumentCsv, GrAdd } from 'react-icons/gr';
 import NavButtonComponent from "../Components/NavButtonComponent/NavButtonComponent"
 import SearchComponent from "../Components/SearchComponent/SearchComponent";
 import CardComponent from "../Components/CardComponent/CardComponent";
@@ -18,7 +19,7 @@ export default function Products() {
       condition: "New",
       brand: "Meeko",
       link: "http://www.tutienda.com",
-      description: "Hermosa chamarra de mezclilla"
+      description: "Hermosa chamarra de mezclilla,Hermosa chamarra de mezclilla,Hermosa chamarra de mezclilla,Hermosa chamarra de mezclilla,Hermosa chamarra de mezclilla,Hermosa chamarra de mezclilla"
     },
 
     {
@@ -121,16 +122,7 @@ export default function Products() {
       link: "http://www.tutienda.com",
       description: "Hermosa chamarra de mezclilla con la aplicación de encaje,"
     },
-    {
-      image_link: "/backregister.svg",
-      title: "Chamarra de mezclilla",
-      price: "100 MXN",
-      inventory: "60 piezas",
-      condition: "New",
-      brand: "Meeko",
-      link: "http://www.tutienda.com",
-      description: "Hermosa chamarra de mezclilla con la aplicación de encaje,Hermosa chamarra de mezclilla con la aplicación de encaje,Hermosa chamarra de mezclilla con la aplicación de encaje,Hermosa chamarra de mezclilla con la aplicación de encaje,Hermosa chamarra de mezclilla con la aplicación de encaje,Hermosa chamarra de mezclilla con la aplicación de encaje"
-    },
+
 
 
 
@@ -166,24 +158,35 @@ export default function Products() {
 
 
 
-      <Container fluid className={styles.texture}>
+      <Container className={styles.texture}>
 
 
         <Row className={styles.productsTop}>
 
-          <Container fluid>
+          <Container className={`m-r ${styles.productContainer}`}>
             <Row className={styles.productHeader}>
 
-              <Col className={`d-none d-sm-block ${styles.productTop}`}>
+              <Col md={3} className={`d-none d-sm-block ${styles.productTop}`}>
 
-                <div className={styles.productBotton}>
-                  <button className={styles.btnCustom}>Nuevo Producto</button>
-                  <button className={styles.btnCustom}>Crea tu CSV</button>
+                <div className={styles.icon}>
+                  <Nav.Link onClick={event => window.location.href = '/'} className={styles.productButton} href="#home">
+
+                    <GrAdd className={styles.productButton} />
+                  </Nav.Link>
+
+                  <Nav.Link onClick={event => window.location.href = '/'} className={styles.productButton} href="#home">
+
+                    <GrDocumentCsv className={styles.productButton} />
+                  </Nav.Link>
+
 
                 </div>
 
+
+
+
               </Col>
-              <Col md={6}>
+              <Col  md={6}>
 
                 <h2>
                   Tus productos
@@ -191,7 +194,7 @@ export default function Products() {
 
               </Col>
 
-              <Col>
+              <Col className= {styles.search} md={3}>
                 <SearchComponent />
               </Col>
 
@@ -205,7 +208,7 @@ export default function Products() {
 
                 cardInfo.map(item => {
                   return (
-                    <Col className={styles.productBottom} xs={12} md={3}>
+                    <Col className={styles.productBottom} xs={12} md={2}>
                       <CardComponent cardData={item} />
                     </Col>
                   )
@@ -216,13 +219,18 @@ export default function Products() {
             </Row>
           </Container>
 
-          <Row>
-            <Col className={"d-block d-sm-none"}>
-              <NavButtonComponent />
+          <Container>
+            <Row>
+              <Col className={"d-block d-sm-none"}>
+                <NavButtonComponent />
 
-            </Col>
+              </Col>
 
-          </Row>
+            </Row>
+
+          </Container>
+
+
 
 
         </Row>
@@ -230,20 +238,7 @@ export default function Products() {
 
 
       <footer className="footer">
-        <script
-          src="https://unpkg.com/react/umd/react.production.min.js"
-          crossorigin
-        ></script>
-
-        <script
-          src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"
-          crossorigin
-        ></script>
-
-        <script
-          src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"
-          crossorigin
-        ></script>
+       
       </footer>
     </div>
   );

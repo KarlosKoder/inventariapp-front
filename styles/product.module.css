@@ -6,10 +6,26 @@
   background-repeat: repeat;
 }
 
-@media (max-width: 1200px) {
-  .navComp {
-    visibility: hidden;
-  }
+.icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.productButton {
+  padding-left: 0;
+  color: #E88F14;
+  font-size: 25px !important;
+}
+
+.productBottom {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.divButtom {
+  background-color: white !important;
+  height: 30px !important;
 }
 
 .productHeader {
@@ -35,5 +51,10 @@
 .btnCustom:hover {
   background-color: #db8e13;
   color: white;
+}
+
+.search {
+  padding-left: 0;
+  padding-right: 0;
 }
 /*# sourceMappingURL=product.module.css.map */
