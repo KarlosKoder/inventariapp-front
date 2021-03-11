@@ -6,7 +6,7 @@ function SearchComponent() {
     return (
         <div>
             
-      <FormControl  type="text" placeholder="&#xf002; Username"  className={`fa fa-plus mr-sm-2 ${styles.fa} }`} />
+      <FormControl  type="text" placeholder="&#xf002; Busca tus productos"  className={`fa fa-plus mr-sm-2 ${styles.search} }`} />
      
   
             

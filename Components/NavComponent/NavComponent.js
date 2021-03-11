@@ -9,7 +9,7 @@ function NavComponent() {
     return (
         <>
            <Container className="p-0">
-             <Navbar className="p-0" expand="md">
+             <Navbar className={styles.navBar}  expand="md">
                         <Navbar.Brand href="#home">
                             <img onClick={() => router.push('/')} className={styles.imgFluid} 
                                 width="120"

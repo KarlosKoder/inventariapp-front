@@ -2,6 +2,8 @@
 .cardComponent{
  
     box-shadow: 0 4px 8px 0 rgba(146, 146, 145, 0.2), 0 6px 20px 0 rgba(241, 240, 240, 0.15);
+    padding-left: 0;
+    padding-right:0;
 }
 
 
@@ -36,12 +38,15 @@
 
 .dtitle {
     font-size: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .cardTop {
     
         width: 100%;
-        height: 15vw;
+        height: 8vw;
         object-fit: cover;
         
     
