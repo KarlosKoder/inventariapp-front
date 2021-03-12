@@ -2,5 +2,5 @@ applications:
 - name: inventariapp-front
   memory: 64M
   instances: 1
-  buildpack: https://github.com/cloudfoundry/nginx-buildpack.git
+  buildpack: nginx_buildpack
   
