@@ -14,7 +14,7 @@ import { useState, useEffect } from "react";
 
 export const NewProductComponent= () => {
     const [newproduct, setnewproduct] = useState({
-        
+        availability: false
     })
     const [dataExist, setdataExist] = useState(false)
     
@@ -126,14 +126,14 @@ export const NewProductComponent= () => {
                                     </Col>
                                 
                                     <Col>
-                                        <Form.Group controlId="exampleForm.ControlSelect1">
+                                        {/* <Form.Group controlId="exampleForm.ControlSelect1">
 
                                             <Form.Control as="select" onChange={changeHandler}>
                                                 <option>MXN</option>
                                                 <option>USD</option>
                                                 <option>EUR</option>
                                             </Form.Control>
-                                        </Form.Group>
+                                        </Form.Group> */}
                                     </Col>
                                 </Row>
                             
@@ -156,7 +156,7 @@ export const NewProductComponent= () => {
                                 
                                 <Form.Group>
                                     <Form.Label className={style.label}> ¿Cuantos productos tienes? </Form.Label>
-                                    <Form.Control className={style.input} name="availability" placeholder="3" onChange={changeHandler}/>
+                                    <Form.Control className={style.input} name="inventory" placeholder="3" onChange={changeHandler}/>
                                 </Form.Group>
                                 <Form.Group>
                                     <Form.Label className={style.label}>Condición</Form.Label>

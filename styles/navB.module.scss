@@ -1,0 +1,35 @@
+.fa {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: auto;
+    font-size: 25px;
+     
+  }
+
+  .fa:hover {
+      background-color: orange;
+      border-radius: 50%;
+      color: rgb(250, 217, 155) !important;
+  }
+
+  .fadiv {
+    
+    width: 45vh;
+
+
+  }
+.fanav {
+ 
+ 
+  backdrop-filter: blur(40px) !important ;
+  border: 1px solid #b9dbf665;
+  -webkit-box-shadow: 0px 1px 55px -12px rgba(3,12,26,0.39);
+  -moz-box-shadow: 0px 1px 55px -12px rgba(3,12,26,0.39);
+  box-shadow: 0px 1px 55px -12px rgba(3,12,26,0.39);
+}
+
+.productButton{
+    font-size: 20px;
+    cursor: pointer;
+}
+

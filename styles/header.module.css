@@ -7,17 +7,18 @@
 
 .background {
   background-image: url("../public/assets/bg.png");
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
   position: fixed;
   z-index: -1;
   top: 0px;
+  background-repeat: no-repeat;
 }
 
 .texture {
   background-image: url("../public/assets/texture.png");
   background-attachment: fixed;
-  height: 100vh;
+  height: 90vh;
   background-repeat: no-repeat;
 }
 
@@ -35,22 +36,18 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 /* texto */
-.sectionT {
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
-
 .sectionT > h2 {
   min-width: 20%;
+  font-size: 50px;
   font-weight: 300;
   color: #E88F14;
 }

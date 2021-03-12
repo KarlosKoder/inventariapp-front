@@ -1,6 +1,60 @@
-.productitle {
+.texture {
+  background-image: url("../public/assets/texture.png");
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-repeat: repeat;
+}
+
+.icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.productButton {
+  padding-left: 0;
+  color: #E88F14;
+  font-size: 25px !important;
+}
+
+.productBottom {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.divButtom {
+  background-color: white !important;
+  height: 30px !important;
+}
+
+.productHeader {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btnCustom {
+  background-color: #E88F14;
+  height: 28px;
+  width: 110px;
+  color: white;
+  border: #E88F14;
+  border-radius: 3px;
+  margin-right: 8px;
+  font-size: 13px;
+}
+
+.btnCustom:hover {
+  background-color: #db8e13;
+  color: white;
+}
+
+.search {
+  padding-left: 0;
+  padding-right: 0;
 }
 /*# sourceMappingURL=product.module.css.map */
